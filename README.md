@@ -12,6 +12,8 @@ npm i @ryfylke-react/create-api-slice
 
 Create the slice as you normally would, but make sure `state` is part of your schema. It should take a type of `StateStatus`. Use our `createAPISlice` function instead of `createSlice` from redux toolkit. 
 
+> If you want to use another key than `state` to store the StateStatus, pass in `{ key: "myCustomKey" }` as a second parameter to `createAPISlice`.
+
 _slices/postSlice.ts_
 
 ```typescript
@@ -43,7 +45,9 @@ const postSlice = createAPISlice({
 export const postReducer = postSlice.reducer;
 ```
 
-Then, when you create thunks that require loading state, make sure to append `:load` to the thunk name. 
+Then, when you create thunks that require loading state, make sure to append `:load` to the thunk name.
+
+> If you want to change the `:load` identifier, you can pass in `{ identifier: ":myCustomIdentifier" }` as a second parameter to `createAPISlice`
 
 _slices/postThunks.ts_
 

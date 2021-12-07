@@ -2,6 +2,8 @@
 
 Adds automatic loading state to async thunks. Used as a drop-in replacement for [`@reduxjs/toolkit`](https://github.com/reduxjs/redux-toolkit)'s `createSlice`.
 
+If you are setting up a new project, I'd recommend you to rather go for RTK's [`createAPI`](https://redux-toolkit.js.org/rtk-query/api/createApi). This package was made with the intention for use in existing projects that are otherwise happy to keep using the traditional asyncthunk/slice setup for their API calls. 
+
 ## **Usage**
 
 ```bash
